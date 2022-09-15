@@ -13,6 +13,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.jorge.paulo.jokeapp.effects.INC
 import com.jorge.paulo.jokeapp.effects.MyComposable
 import com.jorge.paulo.jokeapp.effects.MySideEffect
+import com.jorge.paulo.jokeapp.effects.SideEffectExample
+import com.jorge.paulo.jokeapp.effects.ThisCompose
 import com.jorge.paulo.jokeapp.effects.Timer
 import com.jorge.paulo.jokeapp.effects.TimerRememberCoroutineScope
 
@@ -55,8 +57,9 @@ class MainActivity : ComponentActivity() {
                     //Timer()
                     //TimerRememberCoroutineScope()
                     //MyComposable(backPressedDispatcher = onBackPressedDispatcher)
-                    MySideEffect()
-
+                    //MySideEffect()
+                    //SideEffectExample(startingDataCounter = 0, increaseCounter = 1, viewModel = )
+                    ThisCompose()
                 }
             }
         }
