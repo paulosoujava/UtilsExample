@@ -1,0 +1,11 @@
+O que é Padrão de Fábrica?
+Ele define uma interface para criar objetos e permite que as subclasses decidam qual classe instanciar.
+
+prós e contras
+Mesmo que você não saiba de antemão qual classe criar, a classe fábrica se encarrega de criar o objeto.
+O tipo de dado de um objeto é determinado por sua subclasse
+→ Facilidade de escalabilidade
+Minimizar a redundância
+Por que usar o padrão de fábrica?
+Porque o princípio básico dos padrões de projeto orientados a objetos é que eles devem ser abertos para extensão e fechados para modificação. ( OCP , Open Closed Principle)
+Deve ser possível estender ou alterar a funcionalidade de um módulo sem modificar o código.
