@@ -10,10 +10,17 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.jorge.paulo.jokeapp.effects.INC
+import com.jorge.paulo.jokeapp.effects.MyComposable
+import com.jorge.paulo.jokeapp.effects.MySideEffect
+import com.jorge.paulo.jokeapp.effects.Timer
+import com.jorge.paulo.jokeapp.effects.TimerRememberCoroutineScope
+
 import com.jorge.paulo.jokeapp.ui.theme.JokeAppTheme
 import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
@@ -28,12 +35,15 @@ class MainActivity : ComponentActivity() {
         dataStoreManager = DataStoreManager(this@MainActivity)
 
         GlobalScope.launch(Dispatchers.IO) {
-            dataStoreManager.getFromDataStore().collect {
+
+            delay(2000)
+            INC.i = 200 //teste no MySideEffect
+
+            /*dataStoreManager.getFromDataStore().collect {
                 dataStoreManager.saveDataStore(PhoneBook("Sharon", "3526281", "Bangalore"))
                 //phoneBookDetails.setText(it.name + " " + it.phone +" "+ it.address)
-            }
+            }*/
         }
-
 
         setContent {
             JokeAppTheme {
@@ -42,7 +52,11 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Greeting("Android")
+                    //Timer()
+                    //TimerRememberCoroutineScope()
+                    //MyComposable(backPressedDispatcher = onBackPressedDispatcher)
+                    MySideEffect()
+
                 }
             }
         }
