@@ -19,6 +19,7 @@ import com.jorge.paulo.jokeapp.effects.ThisCompose
 import com.jorge.paulo.jokeapp.effects.Timer
 import com.jorge.paulo.jokeapp.effects.TimerRememberCoroutineScope
 import com.jorge.paulo.jokeapp.flow.Repository
+import com.jorge.paulo.jokeapp.layouts.Usage
 
 import com.jorge.paulo.jokeapp.ui.theme.JokeAppTheme
 import kotlinx.coroutines.DelicateCoroutinesApi
@@ -64,7 +65,7 @@ class MainActivity : ComponentActivity() {
                     //MySideEffect()
                     //SideEffectExample(startingDataCounter = 0, increaseCounter = 1, viewModel = )
                     //ThisCompose()
-
+                    Usage()
 
 
 
