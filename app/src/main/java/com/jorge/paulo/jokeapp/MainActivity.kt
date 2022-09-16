@@ -10,6 +10,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.lifecycle.asLiveData
 import com.jorge.paulo.jokeapp.effects.INC
 import com.jorge.paulo.jokeapp.effects.MyComposable
 import com.jorge.paulo.jokeapp.effects.MySideEffect
@@ -17,6 +18,7 @@ import com.jorge.paulo.jokeapp.effects.SideEffectExample
 import com.jorge.paulo.jokeapp.effects.ThisCompose
 import com.jorge.paulo.jokeapp.effects.Timer
 import com.jorge.paulo.jokeapp.effects.TimerRememberCoroutineScope
+import com.jorge.paulo.jokeapp.flow.Repository
 
 import com.jorge.paulo.jokeapp.ui.theme.JokeAppTheme
 import kotlinx.coroutines.DelicateCoroutinesApi
@@ -46,7 +48,9 @@ class MainActivity : ComponentActivity() {
                 //phoneBookDetails.setText(it.name + " " + it.phone +" "+ it.address)
             }*/
         }
-
+        Repository().get().asLiveData().observe(this) {
+            println("THE NUMBER IS: $it")
+        }
         setContent {
             JokeAppTheme {
                 // A surface container using the 'background' color from the theme
@@ -59,7 +63,11 @@ class MainActivity : ComponentActivity() {
                     //MyComposable(backPressedDispatcher = onBackPressedDispatcher)
                     //MySideEffect()
                     //SideEffectExample(startingDataCounter = 0, increaseCounter = 1, viewModel = )
-                    ThisCompose()
+                    //ThisCompose()
+
+
+
+
                 }
             }
         }

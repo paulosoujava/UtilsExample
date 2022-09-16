@@ -1,0 +1,48 @@
+Herança e composição são técnicas usadas para estabelecer
+relacionamentos entre classes e objetos.
+É importante entender qual deles favorecer
+ para obter um bom design de software.
+
+ Herança
+ A herança estabelece um relacionamento
+  “ é-um ” entre as classes.
+  Portanto, uma classe filha herda todos
+  os campos e métodos não privados de sua
+  classe pai. Por causa disso,
+  você pode substituir uma classe filha no lugar de seu pai.
+
+  Nota : Quando uma classe estende outra classe,
+  isso é chamado de herança de implementação.
+   Outra forma de herança é a herança de interface,
+    na qual uma interface ou classe estende ou implementa
+    outra interface. Como as interfaces não têm detalhes
+    de implementação vinculados, a herança de
+    interface não tem o mesmo problema que a herança de implementação.
+
+    Princípio da Substituição de Liskov
+    O núcleo do LSP é que as subclasses devem ser
+    substituíveis por suas superclasses.
+    E para que isso aconteça, os contratos definidos
+    pela superclasse devem ser cumpridos por suas subclasses.
+    Contratos como assinaturas de função
+    (nome da função, tipos de retorno e argumentos)
+    são aplicados como erros de tempo de compilação
+    por linguagens de tipagem estática como Java e Kotlin.
+
+    No entanto, operações como lançar exceções incondicionalmente,
+    como UnsupportedOperationException,
+    nos métodos substituídos quando não é esperado
+    na superclasse — violam esse princípio.
+
+
+    Composição
+    Composição é uma técnica em que você compõe
+    uma classe adicionando campos privados à
+     classe que referencia uma instância
+     da classe existente em vez de estendê-la.
+      Assim, um relacionamento “ tem-a ” é
+      estabelecido entre a classe composta e
+      suas instâncias contidas. A classe cumpre
+       sua responsabilidade encaminhando ou
+        invocando métodos não privados de seus campos privados.
+
