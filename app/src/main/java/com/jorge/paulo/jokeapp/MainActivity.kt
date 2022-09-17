@@ -10,7 +10,11 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.asLiveData
+
+
+import com.jorge.paulo.jokeapp.biometria.ViewBiometric
 import com.jorge.paulo.jokeapp.effects.INC
 import com.jorge.paulo.jokeapp.effects.MyComposable
 import com.jorge.paulo.jokeapp.effects.MySideEffect
@@ -29,7 +33,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
-class MainActivity : ComponentActivity() {
+class MainActivity : FragmentActivity() {
 
     lateinit var dataStoreManager: DataStoreManager
 
@@ -65,8 +69,9 @@ class MainActivity : ComponentActivity() {
                     //MySideEffect()
                     //SideEffectExample(startingDataCounter = 0, increaseCounter = 1, viewModel = )
                     //ThisCompose()
-                    Usage()
+                    //Usage()
 
+                    ViewBiometric()
 
 
                 }
